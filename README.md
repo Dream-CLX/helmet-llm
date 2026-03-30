@@ -103,7 +103,7 @@ pip install -r requirements/metrics.txt
 本项目使用的基础模型为：Qwen2.5-VL-3B-Instruct
 由于基础模型体积较大，本仓库 不直接提供基础模型权重。请使用者自行下载，并放置到本地目录，例如：models/Qwen2.5-VL-3B-Instruct/。关于它的下载可以在hugging-face开源项目中找到.
 
-由于github上次文件大小限制，我已经将通过Lora训练好的模型发布在https://huggingface.co/Lixiang-Chu/Qwen2.5-VL-3B-Helmet-Detector/tree/main，如果有需要请前往下载，同时注意，这个微调模型需要和基础模型一起使用（因为保存的参数只是lora微调的秩参数，需要挂到基础模型上使用），同时，请注意！！！如果需要使用，请修改Qwen2.5-VL-3B-Helmet-Detector/lora/qwen25vl_shwd_lora_full/adapter_config.json这个文件当中的基础模型路径！
+由于github上次文件大小限制，我已经将通过Lora训练好的模型发布在(https://huggingface.co/Lixiang-Chu/Qwen2.5-VL-3B-Helmet-Detector/tree/main)，如果有需要请前往下载，同时注意，这个微调模型需要和基础模型一起使用（因为保存的参数只是lora微调的秩参数，需要挂到基础模型上使用），同时，请注意！！！如果需要使用，请修改Qwen2.5-VL-3B-Helmet-Detector/lora/qwen25vl_shwd_lora_full/adapter_config.json这个文件当中的基础模型路径！
 
 
 ---
@@ -120,7 +120,7 @@ data/
 ├── shwd_helmet_val.jsonl
 └── shwd_helmet_test.jsonl
 ```
-图片数据获取方式:https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset?tab=readme-ov-file,请自行下载图像数据，并将图片整理到如下目录中：
+图片数据获取方式:(https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset?tab=readme-ov-file),请自行下载图像数据，并将图片整理到如下目录中：
 ```text
 data/
 └── JPEGImages/
