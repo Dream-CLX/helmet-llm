@@ -220,3 +220,8 @@ python scripts/evaluate_compare.py
 off-topic rate：是否出现明显跑题内容
 format completeness：回答是否包含“风险判断 + 风险等级 + 原因 + 建议”等关键信息
 
+### 测试结果
+按照以上的指标，我们最终给出我们微调后与微调前模型在该任务上的定量对比，结果如下
+<img width="1160" height="445" alt="bf11801a0ec3f16964ae152ab09b8134" src="https://github.com/user-attachments/assets/9eaf39cf-0fc4-4aaf-bb70-621063251adf" />
+可以看出，微调后的结果相比于微调前的提升非常大，这点从我们最开始给出的随机示例也能够看出。
+
