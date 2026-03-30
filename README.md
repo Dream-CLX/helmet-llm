@@ -17,7 +17,29 @@
 ---
 
 ## 效果展示
- 
+为了方便效果的展示，我们从测试集中随机抽取了两张图片作为可视化结果的展示：
+### 例1：
+![2711a5b4698e7fb9f56a5de3a7a3be20](https://github.com/user-attachments/assets/e84172f2-0303-4e2a-8183-135a4269eeaf)
+
+promt:请判断这张图片是否存在安全帽佩戴风险，并给出风险等级、原因和建议。
+微调前模型：
+<img width="1381" height="90" alt="be565d62c75d4bd11b7dcdb56b41720d" src="https://github.com/user-attachments/assets/08fad450-7815-4b0e-b628-1f5b04c384e3" />  
+
+微调后模型：
+<img width="1295" height="55" alt="72d4eb6e282cc57b8d23ea16e73fb2cb" src="https://github.com/user-attachments/assets/b80873cd-67d7-4243-a286-4a9dd7fb5e2e" />
+我们可以很明显的看出原模型在表达上，风险识别上都有瑕疵，微调后模型在判断风险，风险等级识别以及区域识别上有了非常明显的提升。
+
+### 例2：
+![ea247546f148cf85ab1e9f85d760fb22](https://github.com/user-attachments/assets/360b95ab-5ed2-405b-918a-7ee3455bc862)
+
+promt:请判断这张图片是否存在安全帽佩戴风险，并给出风险等级、原因和建议。
+
+微调前模型：
+<img width="1079" height="303" alt="c1760f4e4fa1af231d477ac5c0dff5ec" src="https://github.com/user-attachments/assets/8f4eba52-2c66-4ddd-9912-9b74d84cc0fc" />
+
+微调后模型：
+<img width="1189" height="90" alt="9aadb0bfc771aed2765ce49ca5e4afd5" src="https://github.com/user-attachments/assets/281cb87f-51a8-43f3-9f1f-9a16a8836b52" />
+对于这种带有广告水印的高难度图片（同时人物仅仅占据图片的一小部分），我们也能够看出微调的效果，改正了原模型在风险判断上的失误，同时表达的语言更加简洁清晰。
 
 ## 项目特点
 
@@ -79,8 +101,10 @@ pip install -r requirements/metrics.txt
 
 ## 微调模型说明
 本项目使用的基础模型为：Qwen2.5-VL-3B-Instruct
+由于基础模型体积较大，本仓库 不直接提供基础模型权重。请使用者自行下载，并放置到本地目录，例如：models/Qwen2.5-VL-3B-Instruct/。关于它的下载可以在hugging-face开源项目中找到.
 
-由于基础模型体积较大，本仓库 不直接提供基础模型权重。请使用者自行下载，并放置到本地目录，例如：models/Qwen2.5-VL-3B-Instruct/。关于它的下载可以在hugging-face开源项目中找到
+由于github上次文件大小限制，我已经将通过Lora训练好的模型发布在https://huggingface.co/Lixiang-Chu/Qwen2.5-VL-3B-Helmet-Detector/tree/main，如果有需要请前往下载，同时注意，这个微调模型需要和基础模型一起使用（因为保存的参数只是lora微调的秩参数，需要挂到基础模型上使用），同时，请注意！！！如果需要使用，请修改Qwen2.5-VL-3B-Helmet-Detector/lora/qwen25vl_shwd_lora_full/adapter_config.json这个文件当中的基础模型路径！
+
 
 ---
 
