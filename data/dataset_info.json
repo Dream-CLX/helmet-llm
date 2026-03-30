@@ -1,0 +1,32 @@
+{
+  "shwd_helmet_train": {
+    "file_name": "shwd_helmet_train.jsonl",
+    "formatting": "alpaca",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "images": "images"
+    }
+  },
+  "shwd_helmet_val": {
+    "file_name": "shwd_helmet_val.jsonl",
+    "formatting": "alpaca",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "images": "images"
+    }
+  },
+  "shwd_helmet_test": {
+    "file_name": "shwd_helmet_test.jsonl",
+    "formatting": "alpaca",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "images": "images"
+    }
+  }
+}
